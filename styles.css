@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+#commands-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas con ancho igualmente dividido */
+  gap: 20px;
+  justify-items: center; /* Centrar los elementos horizontalmente en cada columna */
+}
+
+.command {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%; /* El 90% del ancho del elemento padre (commands-list) */
+  max-width: 300px; /* Máximo ancho de 300px para cada comando */
+}
+
+.command h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+.command p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+/* Media queries para ajustar el número de columnas en pantallas más pequeñas */
+@media screen and (max-width: 1200px) {
+  #commands-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas con ancho menor o igual a 1200px */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #commands-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas con ancho menor o igual a 900px */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #commands-list {
+    grid-template-columns: 1fr; /* 1 columna en pantallas con ancho menor o igual a 600px */
+  }
+}
+button.toggle-button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button.toggle-button:hover {
+  background-color: #45a049;
+}
+
+button.toggle-button:focus {
+  outline: none;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 5px 0 0 5px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #a0a0a0;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 0 5px 5px 0;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #333333;
+}
+
+.container {
+  margin-top: 20px;
+}
